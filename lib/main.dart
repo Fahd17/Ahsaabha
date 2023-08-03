@@ -1,3 +1,4 @@
+import 'package:ahsabha/views/sign_up_page.dart';
 import 'package:flutter/material.dart';
 import 'views/initial_page.dart';
 
@@ -11,6 +12,6 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: (InitialPage()));
+      home: (SignUpPage()));
   }
 }

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:ahsabha/custom_widget/custom_button.dart';
 import 'package:flutter/material.dart';
 
 class InitialPage extends StatelessWidget {
@@ -41,29 +42,9 @@ class InitialPage extends StatelessWidget {
                     ),
                   ]),
                   Column(children: [
-                    ElevatedButton(
-                      onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        fixedSize: Size(
-                          MediaQuery.of(context).size.width-50, 
-                          40
-                          )
-                      ),
-                      child: Text("Login"),
-                    ),
-                    ElevatedButton(onPressed: () {},
-                      style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.white,
-                        foregroundColor: Colors.black,
-                        side: BorderSide(color: Colors.black),
-                        fixedSize: Size(
-                          MediaQuery.of(context).size.width-50, 
-                          40
-                          )
-                      ),
-                     child: Text("Sign up")
-                     ),
+                    CustomButton(buttonText: "Login"),
+                    CustomButton(buttonText: "Sign up", backgroundColor: 0xffFFFFFF,
+                    foregroundColor: 0xff010101, borderColor: 0xff010101),
                   ]),
                 ],
               )
