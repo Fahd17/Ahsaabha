@@ -2,6 +2,7 @@
 
 import 'package:ahsabha/custom_widget/custom_button.dart';
 import 'package:ahsabha/custom_widget/custom_title.dart';
+import 'package:ahsabha/app_statics/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:ahsabha/custom_widget/custom_text_field.dart';
 
@@ -11,9 +12,9 @@ class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9EFE5),
+      backgroundColor: AppColors.primaryColor,
       appBar: AppBar(
-          backgroundColor: Color(0xffF9EFE5),
+          backgroundColor: AppColors.primaryColor,
           elevation: 2,
           title: CustomTitle()),
       body: SafeArea(
