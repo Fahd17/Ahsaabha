@@ -1,6 +1,6 @@
-import 'package:ahsabha/views/sign_up_page.dart';
+import 'package:ahsabha/views/pre_authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
-import 'views/initial_page.dart';
+import 'views/pre_authentication/initial_page.dart';
 
 void main() {
   runApp(const MainApp());

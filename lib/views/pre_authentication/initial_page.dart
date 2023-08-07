@@ -2,10 +2,13 @@
 
 import 'package:ahsabha/custom_widget/custom_button.dart';
 import 'package:ahsabha/custom_widget/custom_image.dart';
-import 'package:ahsabha/views/sign_up_page.dart';
+import 'package:ahsabha/app_statics/app_colors.dart';
+import 'package:ahsabha/extensions/navigation.dart';
+import 'package:ahsabha/views/pre_authentication/login_page.dart';
+import 'package:ahsabha/views/pre_authentication/sign_up_page.dart';
 import 'package:flutter/material.dart';
 
-import '../custom_widget/custom_title.dart';
+import '../../custom_widget/custom_title.dart';
 
 class InitialPage extends StatelessWidget {
   const InitialPage({super.key});
@@ -13,9 +16,9 @@ class InitialPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffF9EFE5),
+      backgroundColor: AppColors.primaryColor,
       appBar: AppBar(
-          backgroundColor: Color(0xffF9EFE5),
+          backgroundColor: AppColors.primaryColor,
           elevation: 2,
           title: CustomTitle()),
       body: SafeArea(
@@ -49,7 +52,9 @@ class InitialPage extends StatelessWidget {
                     Column(children: [
                       CustomButton(
                         buttonText: "Login",
-                        onPressed: () {},
+                        onPressed: () {
+                          context.navigateTo(LoginPage());
+                        },
                       ),
                       CustomButton(
                         buttonText: "Sign up",
@@ -57,12 +62,7 @@ class InitialPage extends StatelessWidget {
                         foregroundColor: 0xff010101,
                         borderColor: 0xff010101,
                         onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const SignUpPage(),
-                            ),
-                          );
+                          context.navigateTo(SignUpPage());
                         },
                       ),
                     ]),
